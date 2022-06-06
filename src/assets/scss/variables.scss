@@ -1,0 +1,50 @@
+//mediaqueries
+$md: "(min-width: 768px)";
+$lg: "(min-width: 1150px)";
+
+// color
+$baseColor: #545454;
+
+$white: #fcfcfc;
+$whiteDark: #e8e8e8;
+
+$green: #09a275;
+
+$blue: #4a90e2;
+$blue2: #3139f6;
+
+$red: #d85454;
+$redLight: #e69393;
+
+$vailet: #b10058;
+
+$Yellow: #f2b701;
+
+$grayLight3: #f4f4f4;
+$grayLight2: #bdbdbd;
+$grayLight1: #e6e6e6;
+$grayLight: #f0f0f0;
+$gray: #979797;
+$grayDark: #4a4a4a;
+
+// timing
+$timing: .3s;
+
+// Auth
+$authTransitionTimingFunction: ease-in-out;
+
+//fonts
+$font-family: 'proxima-nova';
+
+$fontSize: 16px;
+$fontLineHeight: 19px;
+
+// radius
+$radius: 4px;
+
+// z-index
+$z-idx-under: -1;
+$z-idx-main: 1;
+$z-idx-over: 2;
+
+$space: 4px;

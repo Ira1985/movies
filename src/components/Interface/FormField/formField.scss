@@ -1,0 +1,11 @@
+.form {
+  &__input {
+    width: 100%;
+  }
+
+  &__errors {
+    color: red;
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+}

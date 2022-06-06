@@ -1,0 +1,16 @@
+.user {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  &__name {
+    color: orange;
+    padding-right: 10px;
+    margin: 0px;
+  }
+
+  &__image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+}

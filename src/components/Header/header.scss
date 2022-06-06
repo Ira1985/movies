@@ -1,0 +1,13 @@
+.header {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  background-color: blue;
+  padding: 5px 0px;
+
+  &__login-button {
+    background-color: orange;
+    margin-right: 10px;
+  }
+}

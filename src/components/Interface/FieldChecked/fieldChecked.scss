@@ -1,0 +1,10 @@
+.field-checked {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1px 0px;
+
+  &__checkbox {
+    margin-right: 5px;
+  }
+}
