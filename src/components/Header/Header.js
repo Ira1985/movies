@@ -40,7 +40,7 @@ class Header extends Component{
         const {openModal, user} = this.state
         return (
             <div className="header">
-                {user ? <User user={user}/> : <button className="header__login-button" onClick={() => this.toggleModal()}>Войти</button>}
+                {user ? <User user={user} updateUser={this.updateUser}/> : <button className="header__login-button" onClick={() => this.toggleModal()}>Войти</button>}
                 <Modal
                     isOpen={openModal}
                 >

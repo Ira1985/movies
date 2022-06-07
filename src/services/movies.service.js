@@ -6,6 +6,7 @@ export const movieService = {
     createRequestToken,
     validateWithLogin,
     createSession,
+    deleteSession,
     getUser
 }
 
@@ -45,6 +46,17 @@ function validateWithLogin(payload) {
 }
 function createSession(payload) {
     return _axios.post('/authentication/session/new', payload)
+        .then(response => {
+            if (response && response.status === 200) {
+                return response.data
+            }
+        })
+}
+function deleteSession(payload) {
+    const data = {
+        data: payload
+    }
+    return _axios.delete('/authentication/session', data)
         .then(response => {
             if (response && response.status === 200) {
                 return response.data
