@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import LeftSidebar from "../LeftSidebar/LeftSidebar";
 import MainContant from "../MainContant/MainContant";
 import "./movieContainer.scss"
-import Header from "../Header/Header";
 
 export const FilterContext = React.createContext()
 
@@ -34,11 +33,8 @@ class MovieContainer extends Component{
                 onFiltersChange: this.onFiltersChange
             }}>
                 <div className="movie-container">
-                    <Header/>
-                    <div className="movie-container__content">
-                        <LeftSidebar/>
-                        <MainContant/>
-                    </div>
+                    <LeftSidebar/>
+                    <MainContant/>
                 </div>
             </FilterContext.Provider>
         )

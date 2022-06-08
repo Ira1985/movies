@@ -1,5 +1,6 @@
 import React, {Component} from "react";
-import "./movieItem.scss"
+import "./movieItem.scss";
+import {Link} from "react-router-dom";
 
 class MovieItem extends Component{
     constructor(props) {
@@ -18,14 +19,16 @@ class MovieItem extends Component{
             backgroundPosition: 'center'
         };
         return (
-            <div className='movie-item'>
-                <div
-                    className='movie-image'
-                    style={imageStyle}
-                />
-                <p>{item.title}</p>
-                <span>Рейтинг: {item.vote_average}</span>
-            </div>
+            <Link to={`/movie/${item.id}`}>
+                <div className='movie-item'>
+                    <div
+                        className='movie-image'
+                        style={imageStyle}
+                    />
+                    <p>{item.title}</p>
+                    <span>Рейтинг: {item.vote_average}</span>
+                </div>
+            </Link>
         )
     }
 }

@@ -1,13 +1,14 @@
 import React, {Component} from "react";
 import "./defaultLayout.scss"
-import MovieContainer from "../../MovieContainer/MovieContainer";
-//import SimpleComponent from "../../SimpleComponent/SimpleComponent";
+import Header from "../../Header/Header";
+import {Outlet} from "react-router-dom";
 
 class DefaultLayout extends Component{
     render() {
         return (
             <div className='default-layout'>
-              <MovieContainer/>
+                <Header/>
+                <Outlet/>
             </div>
         )
     }
