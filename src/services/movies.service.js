@@ -2,6 +2,7 @@ import {_axios} from "../utils/axios";
 
 export const movieService = {
     getMovieList,
+    getMovieDetails,
     getGenreList,
     createRequestToken,
     validateWithLogin,
@@ -14,6 +15,14 @@ function getMovieList(payload) {
     return _axios.get('/discover/movie', {
         params: payload
     })
+        .then(response => {
+            if (response && response.status === 200) {
+                return response.data
+            }
+        })
+}
+function getMovieDetails(movie_id) {
+    return _axios.get(`/movie/${movie_id}`)
         .then(response => {
             if (response && response.status === 200) {
                 return response.data

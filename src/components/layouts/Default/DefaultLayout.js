@@ -1,15 +1,20 @@
 import React, {Component} from "react";
 import "./defaultLayout.scss"
 import Header from "../../Header/Header";
-import {Outlet} from "react-router-dom";
+import MovieContainer from "../../MovieContainer/MovieContainer";
+import MovieDescription from "../../MovieDescription/MovieDescription";
+import {BrowserRouter, Route} from "react-router-dom";
 
 class DefaultLayout extends Component{
     render() {
         return (
-            <div className='default-layout'>
-                <Header/>
-                <Outlet/>
-            </div>
+            <BrowserRouter>
+                <div className='default-layout'>
+                    <Header/>
+                    <Route exact path="/" component={MovieContainer} />
+                    <Route path="/movie/:id" component={MovieDescription}/>
+                </div>
+            </BrowserRouter>
         )
     }
 }

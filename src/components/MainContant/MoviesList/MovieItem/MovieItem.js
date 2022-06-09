@@ -19,7 +19,7 @@ class MovieItem extends Component{
             backgroundPosition: 'center'
         };
         return (
-            <Link to={`/movie/${item.id}`}>
+            <Link to={`movie/${item.id}`}>
                 <div className='movie-item'>
                     <div
                         className='movie-image'
