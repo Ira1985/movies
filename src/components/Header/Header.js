@@ -4,6 +4,8 @@ import {Modal, ModalBody} from "reactstrap";
 import Login from "./Login/Login";
 import User from "./User/User";
 import {movieService} from "../../services/movies.service";
+import {store} from "../../redux/store";
+import {actions} from "../../redux/actions";
 
 class Header extends Component{
     constructor() {
@@ -20,6 +22,7 @@ class Header extends Component{
             const user = await movieService.getUser({
                 session_id
             })
+            store.dispatch(actions.updateUser(user))
             this.updateUser(user)
         }
     }

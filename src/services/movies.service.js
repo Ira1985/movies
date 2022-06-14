@@ -8,7 +8,9 @@ export const movieService = {
     validateWithLogin,
     createSession,
     deleteSession,
-    getUser
+    getUser,
+    pushToFavoriteMovie,
+    getFavoriteMovies
 }
 
 function getMovieList(payload) {
@@ -81,4 +83,21 @@ function getUser(payload) {
                 return response.data
             }
         })
+}
+function pushToFavoriteMovie(account_id, session_id, payload) {
+    return _axios.post(`/account/${account_id}/favorite`, payload, {
+        params: {
+            session_id
+        }
+    })
+        .then(response => {
+            if (response && response.status === 200) {
+                return response.data
+            }
+        })
+}
+function getFavoriteMovies(account_id, payload) {
+    return _axios.get(`/account/${account_id}/favorite/movies`, {
+        params: payload
+    })
 }

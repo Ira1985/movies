@@ -3,7 +3,7 @@
   height: 250px;
   border: 1px solid black;
   border-radius: 4px;
-  color: red;
+  position: relative;
 
   &:hover {
     border: 1px solid blue;
@@ -13,5 +13,14 @@
   .movie-image {
     width: 100%;
     height: 60%;
+  }
+
+  &__actions {
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
   }
 }

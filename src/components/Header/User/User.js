@@ -17,6 +17,15 @@ class User extends Component{
             console.log('error', e)
         }
     }
+    getFavoriteMovie = async () => {
+        const {user} = this.props
+        const session_id = localStorage.getItem('session_id');
+        try {
+            const data = await movieService.getFavoriteMovies(user.id, { session_id })
+        } catch (e) {
+            console.log('error', e)
+        }
+    }
     bindCallback = (name) => {
         this[name]()
     }
