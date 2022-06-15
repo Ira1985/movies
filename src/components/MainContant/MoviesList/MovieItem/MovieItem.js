@@ -42,8 +42,8 @@ class MovieItem extends Component{
                     <span>Рейтинг: {item.vote_average}</span>
                 </Link>
                 <div className='movie-item__actions'>
-                    <button onClick={() => this.pushToFavorite()}>Любимый</button>
-                    <button onClick={this.pushToWatching}>Посмотреть</button>
+                    <button className='movie-item__action' onClick={() => this.pushToFavorite()}>Любимый</button>
+                    <button className='movie-item__action' onClick={this.pushToWatching}>Посмотреть</button>
                 </div>
             </div>
         )
